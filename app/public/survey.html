@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gathering Finder</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center"><span class="glyphicon glyphicon-thumbs-up" style="margin-right:12px;"></span>Gathering Finder</h1>
+			<h3 class="text-center">Fill out the survey below to find out who your new opponent could potentially be!</h3>
+			<!-- name/photo/description start -->
+			<div class="panel panel-default"  style="margin-top:35px;">
+					<div class="panel-heading"><h3 style="margin-top:10px;">About You</h3></div>
+					<div class="panel-body">
+					<h4>Your Name</h4>
+					<input class="form-control" type="text" placeholder="Type Your Name..." id="name" required>
+					<br>
+					<h4>Your Photo</h4>
+					<input class="form-control" type="text" placeholder="Link To Your Photo..." id="photo" required>
+					<br>
+					<h4>Tell Us About Yourself</h4>
+					<input class="form-control" type="text" placeholder="Write a brief description about your background with Magic The Gathering..." id="description" required>
+					<br>
+				</div>
+				<!-- name/photo/description end -->
+				<!-- Questions List -->
+				<div class="panel-heading"><h3 style="margin-top:10px;">Play Style Questions</h3></div>
+				<div class="panel-body">	
+					<h4>Question 1</h4>
+					<h5>How seriously do you play Magic: The Gathering?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question1" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Super-Casual - When me and my friends feel like playing.</option>
+					    	<option value="2">Casual - I participate in my local cardshop's FNM/Tournaments.</option>
+					    	<option value="3">Semi-Serious - I have competed in regional tournaments a few times.</option>
+					    	<option value="4">Professional - I am currently competing in sanctioned Magic Grand Prix/Pro Tours.</option>
+					     	<option value="5">Veteran - I have achieved Hall of Fame status as a professional Magic player.</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 2</h4>
+					<h5>What is your favorite game-type for Magic? </h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question2" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Standard</option>
+					    	<option value="2">Modern</option>
+					    	<option value="3">Vintage/Legacy</option>
+					    	<option value="4">Limited/Draft</option>
+					     	<option value="5">Commander/Other</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 3</h4>
+					<h5>What type of play style do you prefer your deck to be?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question3" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Combo</option>
+					    	<option value="2">Control</option>
+					    	<option value="3">Aggro</option>
+					    	<option value="4">Burn</option>
+					     	<option value="5">Mill/Alternative Win Scenario/Other</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 4</h4>
+					<h5>What type of creature-card interaction do you like to build your deck around?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question4" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Creature Synergy/Tribal Buffs</option>
+					    	<option value="2">Token Based</option>
+					    	<option value="3">Massive Creatures</option>
+					    	<option value="4">Specific Mechanics (Infect, Dredge, Cycling etc.)</option>
+					     	<option value="5">I Prefer Spell/Artifact Decks</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 5</h4>
+					<h5>Out of the 5 true mana types, which color is your favorite?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question5" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Black</option>
+					    	<option value="2">Blue</option>
+					    	<option value="3">Green</option>
+					    	<option value="4">Blue</option>
+					     	<option value="5">White</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 6</h4>
+					<h5>What is your favorite type way to end a game?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question6" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">An executed combo chain.</option>
+					    	<option value="2">Buffing a monster to deal lethal damage.</option>
+					    	<option value="3">Attrition style battle.</option>
+					    	<option value="4">Forcing the other player to quit.</option>
+					     	<option value="5">Alternative Win Conditions/Other</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 7</h4>
+					<h5>How well are you familiar with pre-2003 Magic: The Gathering? (Vintage/Legacy)</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question7" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">1 (Not Familiar)</option>
+					    	<option value="2">2</option>
+					    	<option value="3">3</option>
+					    	<option value="4">4</option>
+					     	<option value="5">5 (My Favorite Era)</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 8</h4>
+					<h5>What type of non-basic land do you prefer></h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question8" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Taplands (shocklands, checklands, fastlands, etc.</option>
+					    	<option value="2">Painlands</option>
+					    	<option value="3">Utility Lands (fetchlands, manlands, striplands, etc.)</option>
+					    	<option value="4">Other types of lands (Urza's lands, artifact lands, legendary lands, etc.</option>
+					     	<option value="5">Psuedo-Lands (moxes, mana dorks, spells, etc.)</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 9</h4>
+					<h5>What is the most important aspect of the game when it comes to your play style?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question9" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">Being able to answer my opponent whenever I need to.</option>
+					    	<option value="2">Having the right pieces of your deck at the right time.</option>
+					    	<option value="3">A good opening hand.</option>
+					    	<option value="4">The right mana curve.</option>
+					     	<option value="5">Being able to read your opponent and stay a step ahead.</option>
+					    </select>
+					</div>
+					<br>
+					<h4>Question 10</h4>
+					<h5>Why did you start playing Magic The Gathering?</h5>
+					<div class="form-group">
+					    <select class="chosen-select" id="question10" style="width:25%;">
+					    	<option>(Select Option)</option>
+					    	<option value="1">I love a good resource-based strategy game.</option>
+					    	<option value="2">Competitive gameplay is what draws me in.</option>
+					    	<option value="3">I have played various other card games and ended up on this one.</option>
+					    	<option value="4">The artwork is just so damn cool.</option>
+					     	<option value="5">Other</option>
+					    </select>
+					</div>
+					<button type="submit" class="btn btn-primary" style="margin-top:20px; padding:15px; width:100%;" id="submit"><span class="glyphicon glyphicon-eye-open" style="margin-right:5px;"></span>Submit Your Survey!</button>
+					</div>
+			</div>	
+		</div>
+		<!-- end question list -->
+		<!-- modal -->
+		<div class="modal fade" id="result-modal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">Your Opponent</h2>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<!-- end modal -->
+	</div>
+	<!-- script to display found opponent -->
+	<script type="text/javascript"> 
+		$("#submit").on("click", function(){
+
+    	// Form validation
+    	if($("#name").val().trim() === ''){
+				alert('Please put out your name in the "Your Name" form area.');
+			}
+			else if($("#photo").val().trim() === ''){
+				alert('Please paste a link of a photo of you in the "Your Photo" form area.');
+			}
+			else if ($("#description").val().trim() === ''){
+				alert('Please give a brief description of yourself in the "Tell Us About Yourself" form area.')
+			}
+			// saves the info you submit and compares it to the dummy data hooking you up with an opponent
+			else{
+				// builds array to hold the stored info from form
+				var answerSheet = [];
+
+				for(i = 0; i < 10; i++){
+					answerSheet.push(parseInt($('#question1').val()));
+					answerSheet.push(parseInt($('#question2').val()));
+					answerSheet.push(parseInt($('#question3').val()));
+					answerSheet.push(parseInt($('#question4').val()));
+					answerSheet.push(parseInt($('#question5').val()));
+					answerSheet.push(parseInt($('#question6').val()));
+					answerSheet.push(parseInt($('#question7').val()));
+					answerSheet.push(parseInt($('#question8').val()));
+					answerSheet.push(parseInt($('#question9').val()));
+					answerSheet.push(parseInt($('#question10').val()));
+				}
+				var newOpponent = {
+					name: $("#name").val().trim(),
+					description: $("#description").val().trim(),
+					name: $("#photo").val().trim(),
+					score: answerSheet
+				};
+
+				var currentURL = window.location.origin;
+
+				// If all required fields are filled
+				$.post(currentURL + "/api/opponents", newOpponent, function(data){});
+					
+					$.ajax({url: currentURL + "/api/opponents", method: "GET"}).done(function(res){
+						var yourOpponent;
+						var currentOpponent = 50;
+						var arrayDifference = [];
+						for(i = 0; i < res.length; i++){
+							for(j = 0; j < 10; j++){
+								// this part of the code will not run comparing the numbers and pushing it to the array
+								var newDifference = newOpponent.score[j] - res[i].score[j];
+								arrayDifference.push(Math.abs(newDifference));
+							}
+							var difference = arrayDifference.reduce(addValues, 0);
+
+							if(difference < currentOpponent){
+								yourOpponent = res[i];
+								currentOpponent = difference;
+								arrayDifference = [];
+							}
+							else{
+								arrayDifference = [];
+							}
+						}
+						// shows modal with opponent result
+						var oppName = '<h3>' + yourOpponent.name + '</h3>';
+						var oppDescription = '<h4>' + yourOpponent.description + '</h4>';
+						var oppPhoto = '<img src="' + yourOpponent.photo + '">';
+						$("#result-modal").modal('show');
+						$("#match-name").html(oppName);
+						$("#match-description").html(oppDescription);
+						$("#match-photo").html(oppPhoto);
+					});
+
+			}
+			return false;
+		});
+
+		function addValues(a, b){
+			return a + b;
+		};
+	</script>	
+</body>
+</html>
